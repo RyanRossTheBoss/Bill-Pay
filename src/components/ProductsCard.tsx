@@ -24,11 +24,11 @@ export default function ProductsCard() {
     try {
       const res = await fetch("/api/products", { cache: "no-store" });
       if (!res.ok) throw new Error(await res.text());
-      const json = await res.json();
-      // API returns an object keyed by product id
-      const arr: Product[] = Object.values(json ?? {});
+      const json = (await res.json()) as Record<string, Product> | Product[] | undefined;
+      // API returns either an object keyed by id, or an array
+      const arr: Product[] = Array.isArray(json) ? json : Object.values(json ?? {});
       setProducts(arr);
-    } catch (e: any) {
+    } catch {
       setError("Failed to load products");
     } finally {
       setLoading(false);
@@ -56,7 +56,7 @@ export default function ProductsCard() {
       </div>
       <div className={styles.list}>
         {products.map((p) => (
-          <div key={String((p as any).Product || (p as any).ProductID)} className={styles.row}>
+          <div key={String(p.Product)} className={styles.row}>
             <div className={styles.name}>{p.ProductName}</div>
             <div className={styles.subtle}>{p.Provider || "—"}</div>
             <div className={styles.subtle}>

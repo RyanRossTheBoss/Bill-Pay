@@ -24,7 +24,7 @@ export default function BalanceCard() {
       if (!res.ok) throw new Error(await res.text());
       const json = (await res.json()) as BalanceResponse;
       setData(json);
-    } catch (e: any) {
+    } catch {
       setError("Failed to load balance");
     } finally {
       setIsLoading(false);

@@ -34,7 +34,7 @@ export default function ServicesSection() {
           <div className={styles.card}>
             <div className={styles.iconBox}><FiGlobe size={26} /></div>
             <div className={styles.cardTitle}>INTERNATIONAL MOBILE RECHARGE</div>
-            <div className={styles.cardText}>Recharge your family's mobile phones anywhere in the world</div>
+            <div className={styles.cardText}>Recharge your family&apos;s mobile phones anywhere in the world</div>
           </div>
         </div>
 

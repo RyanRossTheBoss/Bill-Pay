@@ -17,7 +17,7 @@ const NAV_ITEMS = [
 const LOGO_URL = "https://tonetechrec.com/unity-cell-phone-bill-pay/_assets/media/bf5ee7a223c8d1537917fcb7cdfce742.png";
 
 export default function Header() {
-  const pathname = usePathname();
+  usePathname();
 
   return (
     <header className={styles.root}>
