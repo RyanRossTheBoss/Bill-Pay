@@ -1,5 +1,7 @@
 import Image from "next/image";
 import AnimatedTitle from "@/components/AnimatedTitle";
+import TopupForm from "@/components/TopupForm";
+import { FiLock, FiZap, FiGlobe } from "react-icons/fi";
 import styles from "./PayHereSection.module.css";
 
 const IMG_URL = "https://tonetechrec.com/unity-cell-phone-bill-pay/_assets/media/bf5ee7a223c8d1537917fcb7cdfce742.png";
@@ -26,24 +28,28 @@ export default function PayHereSection() {
         <p className={styles.heroSub}>The best products and services on the market are available on our website.</p>
         <div className={styles.highlights}>
           <div className={styles.highlight}>
-            <div className={styles.highlightIcon}>🔒</div>
+            <div className={styles.highlightIcon} aria-hidden>
+              <FiLock size={24} />
+            </div>
             <div className={styles.highlightText}>Secure, encrypted payments</div>
           </div>
           <div className={styles.highlight}>
-            <div className={styles.highlightIcon}>⚡️</div>
+            <div className={styles.highlightIcon} aria-hidden>
+              <FiZap size={24} />
+            </div>
             <div className={styles.highlightText}>Fast processing, minimal steps</div>
           </div>
           <div className={styles.highlight}>
-            <div className={styles.highlightIcon}>🌍</div>
+            <div className={styles.highlightIcon} aria-hidden>
+              <FiGlobe size={24} />
+            </div>
             <div className={styles.highlightText}>Domestic and international top-up</div>
           </div>
         </div>
       </div>
 
       <div className={styles.content}>
-        <section className={styles.card}>
-          <p className={styles.desc}>{DESCRIPTION}</p>
-        </section>
+        <TopupForm embedded />
 
         <div className={styles.imageWrap}>
           <div className={styles.imgShadow}>

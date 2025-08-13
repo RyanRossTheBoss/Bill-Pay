@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import AnimatedTitle from "@/components/AnimatedTitle";
 import styles from "./TopupForm.module.css";
 
 type TopupFormProps = {
@@ -78,10 +79,10 @@ export default function TopupForm({ embedded = false }: TopupFormProps) {
 
   const formContent = (
       <section className={styles.card}>
-        <h1 className={styles.title}>Pay Your Mobile Bill</h1>
+        <AnimatedTitle className={styles.title} text="Pay Your Mobile Bill" />
         <p className={styles.subtitle}>Securely top up using your Paymaster account.</p>
         <form className={styles.form} onSubmit={handleSubmit}>
-          <div>
+          <div className={styles.field}>
             <label className={styles.label} htmlFor="phone">Phone Number (incl. country code)</label>
             <input
               className={styles.input}
@@ -97,7 +98,7 @@ export default function TopupForm({ embedded = false }: TopupFormProps) {
             />
           </div>
 
-          <div>
+          <div className={styles.field}>
             <label className={styles.label} htmlFor="productId">Product ID</label>
             <input
               className={styles.input}
@@ -111,7 +112,7 @@ export default function TopupForm({ embedded = false }: TopupFormProps) {
             />
           </div>
 
-          <div>
+          <div className={`${styles.field} ${styles.fullRow}`}>
             <label className={styles.label} htmlFor="amount">Amount (USD)</label>
             <input
               className={styles.input}
@@ -127,19 +128,18 @@ export default function TopupForm({ embedded = false }: TopupFormProps) {
             />
           </div>
 
-          <div className={styles.buttonRow}>
+          <div className={`${styles.buttonRow} ${styles.fullRow}`}>
             <button className={styles.button} type="submit" disabled={isLoading}>
               {isLoading ? "Submitting..." : "Submit Payment"}
             </button>
           </div>
         </form>
 
-      <pre className={styles.response}>{responseText}</pre>
+      {responseText && (
+        <pre className={styles.response}>{responseText}</pre>
+      )}
       {ctid && (
-        <pre className={styles.response}>
-{`CTID: ${ctid}
-Status: ${status ?? (isPolling ? "Polling..." : "Pending")} `}
-        </pre>
+        <pre className={styles.response}>{`CTID: ${ctid}\nStatus: ${status ?? (isPolling ? "Polling..." : "Pending")}`}</pre>
       )}
       </section>
   );

@@ -6,12 +6,12 @@ import { usePathname } from "next/navigation";
 import styles from "./Header.module.css";
 
 const NAV_ITEMS = [
-  { href: "/", label: "Home" },
-  { href: "/pay-here", label: "Pay Here" },
-  { href: "/what-we-do", label: "What We Do" },
-  { href: "/who-we-are", label: "Who We Are" },
-  { href: "/services", label: "Services" },
-  { href: "/about-us", label: "About Us" },
+  { href: "#top", label: "Home" },
+  { href: "#make-payment", label: "Pay Here" },
+  { href: "#what-we-do", label: "What We Do" },
+  { href: "#who-we-are", label: "Who We Are" },
+  { href: "#what-we-do", label: "Services" },
+  { href: "#about-us", label: "About Us" },
 ];
 
 const LOGO_URL = "https://tonetechrec.com/unity-cell-phone-bill-pay/_assets/media/bf5ee7a223c8d1537917fcb7cdfce742.png";
@@ -35,7 +35,7 @@ export default function Header() {
         </div>
         <nav className={styles.nav} aria-label="Main navigation">
           {NAV_ITEMS.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = false;
             return (
               <Link
                 key={item.href}

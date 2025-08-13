@@ -1,4 +1,5 @@
 import AnimatedTitle from "@/components/AnimatedTitle";
+import { FiHome, FiBookOpen, FiHeart } from "react-icons/fi";
 import styles from "./WhatWeDoSection.module.css";
 
 export default function WhatWeDoSection() {
@@ -13,17 +14,23 @@ export default function WhatWeDoSection() {
         </div>
         <div className={styles.features}>
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon}>🏠</div>
+            <div className={styles.featureIcon} aria-hidden>
+              <FiHome size={28} />
+            </div>
             <div className={styles.featureTitle}>Fight Crises</div>
             <div className={styles.featureText}>Fighting global crises such as homelessness and addiction.</div>
           </div>
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon}>📚</div>
+            <div className={styles.featureIcon} aria-hidden>
+              <FiBookOpen size={28} />
+            </div>
             <div className={styles.featureTitle}>Empower Communities</div>
             <div className={styles.featureText}>Empowering communities with educational resources and infrastructure development.</div>
           </div>
           <div className={styles.featureCard}>
-            <div className={styles.featureIcon}>🤝</div>
+            <div className={styles.featureIcon} aria-hidden>
+              <FiHeart size={28} />
+            </div>
             <div className={styles.featureTitle}>Support Relief</div>
             <div className={styles.featureText}>Supporting charitable organizations and relief programs worldwide.</div>
           </div>

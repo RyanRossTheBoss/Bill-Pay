@@ -2,7 +2,7 @@ import PayHereSection from "@/sections/PayHereSection";
 import WhatWeDoSection from "@/sections/WhatWeDoSection";
 import WhoWeAreSection from "@/sections/WhoWeAreSection";
 import AboutUsSection from "@/sections/AboutUsSection";
-import CenteredFormSection from "@/sections/CenteredFormSection";
+import ServicesSection from "@/sections/ServicesSection";
 
 export default function Home() {
   return (
@@ -10,8 +10,8 @@ export default function Home() {
       <PayHereSection />
       <WhatWeDoSection />
       <WhoWeAreSection />
+      <ServicesSection />
       <AboutUsSection />
-      <CenteredFormSection />
     </main>
   );
 }
