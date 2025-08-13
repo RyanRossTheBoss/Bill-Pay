@@ -12,8 +12,6 @@ export default function SmoothScroll() {
       duration: 1.1,
       easing: (t: number) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      smoothTouch: false,
-      gestureOrientation: "vertical",
     });
     lenisRef.current = lenis;
 
