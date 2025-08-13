@@ -1,0 +1,110 @@
+.page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(1200px 800px at 10% -10%, #9ae6ff33, transparent),
+    radial-gradient(1000px 700px at 110% 10%, #ffb4f233, transparent),
+    linear-gradient(135deg, #0f172a, #111827);
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+}
+
+.card {
+  width: 100%;
+  max-width: 640px;
+  padding: 28px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.title {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  margin: 0 0 20px 0;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.label {
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f3f4f6;
+  outline: none;
+  transition: box-shadow 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+.input:focus-visible {
+  border-color: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.buttonRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.button {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(59, 130, 246, 0.35);
+  transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(59, 130, 246, 0.4);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  filter: grayscale(0.3);
+  opacity: 0.8;
+}
+
+.response {
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(17, 24, 39, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e5e7eb;
+  white-space: pre-wrap;
+  overflow: auto;
+  max-height: 260px;
+}
+
+
