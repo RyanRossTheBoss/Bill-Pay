@@ -1,11 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { type ElementType } from "react";
 import styles from "./AnimatedTitle.module.css";
 
 type AnimatedTitleProps = {
   text: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: ElementType;
   className?: string;
   delayStepMs?: number;
 };
