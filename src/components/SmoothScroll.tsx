@@ -26,10 +26,11 @@ export default function SmoothScroll() {
       const anchor = target?.closest("a[href^='#']") as HTMLAnchorElement | null;
       if (anchor && anchor.getAttribute("href")?.startsWith("#")) {
         const id = anchor.getAttribute("href") as string;
-        const el = id === "#top" ? document.body : document.querySelector(id);
-        if (el) {
-          e.preventDefault();
-          lenis.scrollTo(el, { offset: -12 });
+        e.preventDefault();
+        if (id === "#top") {
+          lenis.scrollTo(0);
+        } else {
+          lenis.scrollTo(id, { offset: -12 });
         }
       }
     };
