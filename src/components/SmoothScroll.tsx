@@ -36,6 +36,19 @@ export default function SmoothScroll() {
     };
     document.addEventListener("click", onClick);
 
+    // If we land on the home page with a hash (e.g. /#services), smooth-scroll to it after hydration
+    const { hash } = window.location;
+    if (hash && hash.startsWith("#")) {
+      // small timeout to ensure layout/sections are mounted
+      setTimeout(() => {
+        if (hash === "#top") {
+          lenis.scrollTo(0);
+        } else {
+          lenis.scrollTo(hash, { offset: -12 });
+        }
+      }, 50);
+    }
+
     return () => {
       document.removeEventListener("click", onClick);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);

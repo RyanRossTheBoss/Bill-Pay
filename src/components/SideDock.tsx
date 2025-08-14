@@ -16,14 +16,14 @@ export default function SideDock() {
     <>
       <div className={`${styles.overlay} ${open ? styles.open : ""}`} onClick={() => setOpen(null)} />
       <div className={styles.dock}>
-        <button className={`${styles.sliceBtn} ${styles.slice1}`} onClick={() => setOpen("topup")} aria-label="Open Top-Up">
-          <span className={`${styles.iconWrap} ${styles.i1}`}><FiSmartphone size={24} /></span>
+        <button className={styles.vBtn} onClick={() => setOpen("topup")} aria-label="Open Top-Up">
+          <FiSmartphone size={22} />
         </button>
-        <button className={`${styles.sliceBtn} ${styles.slice2}`} onClick={() => setOpen("balance")} aria-label="Open Balance">
-          <span className={`${styles.iconWrap} ${styles.i2}`}><FiDollarSign size={24} /></span>
+        <button className={styles.vBtn} onClick={() => setOpen("balance")} aria-label="Open Balance">
+          <FiDollarSign size={22} />
         </button>
-        <button className={`${styles.sliceBtn} ${styles.slice3}`} onClick={() => setOpen("products")} aria-label="Open Products">
-          <span className={`${styles.iconWrap} ${styles.i3}`}><FiGrid size={24} /></span>
+        <button className={styles.vBtn} onClick={() => setOpen("products")} aria-label="Open Products">
+          <FiGrid size={22} />
         </button>
       </div>
 

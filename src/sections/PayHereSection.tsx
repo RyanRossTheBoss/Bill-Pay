@@ -1,10 +1,9 @@
-import Image from "next/image";
 import AnimatedTitle from "@/components/AnimatedTitle";
 import TopupForm from "@/components/TopupForm";
 import { FiLock, FiZap, FiGlobe } from "react-icons/fi";
 import styles from "./PayHereSection.module.css";
 
-const IMG_URL = "https://tonetechrec.com/unity-cell-phone-bill-pay/_assets/media/bf5ee7a223c8d1537917fcb7cdfce742.png";
+// image removed; focusing on centered form
 
 // removed description in favor of embedded form
 
@@ -38,12 +37,6 @@ export default function PayHereSection() {
 
       <div className={styles.content}>
         <TopupForm embedded />
-
-        <div className={styles.imageWrap}>
-          <div className={styles.imgShadow}>
-            <Image src={IMG_URL} alt="Unity phone bill pay" width={640} height={480} />
-          </div>
-        </div>
       </div>
     </section>
   );

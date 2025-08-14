@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import SideDock from "@/components/SideDock";
 import SmoothScroll from "@/components/SmoothScroll";
+import Providers from "@/components/Providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,10 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <SmoothScroll />
-        <Header />
-        <SideDock />
-        {children}
+        <Providers>
+          <Header />
+          <SideDock />
+          {children}
+        </Providers>
       </body>
     </html>
   );
