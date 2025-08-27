@@ -3,6 +3,25 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { getMongoDb } from "@/lib/mongodb";
 import bcrypt from "bcryptjs";
 
+declare module "next-auth" {
+  interface User {
+    id: string;
+  }
+  interface Session {
+    user: {
+      id: string;
+      email: string;
+      name?: string;
+    };
+  }
+}
+
+declare module "next-auth/jwt" {
+  interface JWT {
+    id: string;
+  }
+}
+
 export const authOptions: NextAuthOptions = {
   session: { strategy: "jwt" },
   providers: [
@@ -26,13 +45,13 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        token.id = (user as any).id;
+        token.id = user.id;
       }
       return token;
     },
     async session({ session, token }) {
       if (session.user && token?.id) {
-        (session.user as any).id = token.id as string;
+        session.user.id = token.id;
       }
       return session;
     },
