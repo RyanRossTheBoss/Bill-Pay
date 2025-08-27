@@ -51,11 +51,7 @@ export default function PayHerePage() {
           <p className={styles.desc}>{DESCRIPTION}</p>
         </section>
 
-        <div className={styles.imageWrap}>
-          <div className={styles.imgShadow}>
-            <Image src={IMG_URL} alt="Unity phone bill pay" width={640} height={480} />
-          </div>
-        </div>
+        
       </div>
     </div>
   );
