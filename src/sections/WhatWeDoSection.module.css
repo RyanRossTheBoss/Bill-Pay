@@ -68,7 +68,7 @@
   box-shadow: 0 10px 26px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.12);
   transform: translateY(10px);
   opacity: 0;
-  animation: enterUp 720ms ease forwards;
+  animation: enterUp 800ms ease forwards;
 }
 
 .featureIcon {
@@ -105,7 +105,7 @@
   -webkit-backdrop-filter: blur(12px);
   transform: translateY(12px);
   opacity: 0;
-  animation: enterUp 720ms ease forwards;
+  animation: enterUp 800ms ease forwards;
 }
 
 @keyframes enterUp {
