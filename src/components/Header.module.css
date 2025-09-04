@@ -106,6 +106,165 @@
   background: #e6003a;
 }
 
+/* Mobile Menu Button */
+.mobileMenuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #374151;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.mobileMenuButton:hover {
+  background: #f9fafb;
+  color: #111827;
+}
+
+/* Mobile Sidebar */
+.mobileSidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: white;
+  box-shadow: -4px 0 25px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  transition: right 300ms ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileSidebar.open {
+  right: 0;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sidebarLogo {
+  display: block;
+  object-fit: contain;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #374151;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.closeButton:hover {
+  background: #f9fafb;
+  color: #111827;
+}
+
+.sidebarNav {
+  flex: 1;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarLink {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  color: #374151;
+  text-decoration: none;
+  transition: color 150ms ease, background 150ms ease;
+  font-weight: 500;
+  font-size: 16px;
+  border-left: 3px solid transparent;
+}
+
+.sidebarLink:hover {
+  color: #111827;
+  background: #f9fafb;
+}
+
+.sidebarActive {
+  color: #111827;
+  background: #f3f4f6;
+  font-weight: 600;
+  border-left-color: #ff003e;
+}
+
+.sidebarActions {
+  padding: 20px;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebarIconButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #374151;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sidebarIconButton:hover {
+  background: #f9fafb;
+  color: #111827;
+}
+
+.sidebarAuthBtn {
+  padding: 12px 20px;
+  border-radius: 50px;
+  background: #ff003e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 150ms ease;
+  text-align: center;
+}
+
+.sidebarAuthBtn:hover {
+  background: #e6003a;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
 @media (max-width: 768px) {
   .bar {
     padding: 12px 16px;
@@ -113,22 +272,15 @@
   }
 
   .nav {
-    gap: 16px;
-    max-width: 60%;
-  }
-
-  .link {
-    padding: 6px 8px;
-    font-size: 13px;
+    display: none;
   }
 
   .actions {
-    gap: 8px;
+    display: none;
   }
 
-  .iconButton {
-    width: 36px;
-    height: 36px;
+  .mobileMenuButton {
+    display: flex;
   }
 
   .authBtn {
