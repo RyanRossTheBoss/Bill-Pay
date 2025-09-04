@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import AnimatedTitle from "@/components/AnimatedTitle";
 import styles from "./TopupForm.module.css";
 
 type TopupFormProps = {
@@ -78,12 +77,13 @@ export default function TopupForm({ embedded = false }: TopupFormProps) {
   }
 
   const formContent = (
-      <section className={styles.card}>
-        <AnimatedTitle className={styles.title} text="Pay Your Mobile Bill" />
-        <p className={styles.subtitle}>Securely top up using your Paymaster account.</p>
-        <form className={styles.form} onSubmit={handleSubmit}>
+    <div className={styles.card}>
+      <h2 className={styles.title}>Pay Your Mobile Bill</h2>
+      <p className={styles.subtitle}>Securely top up using your Paymaster account.</p>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={styles.formRow}>
           <div className={styles.field}>
-            <label className={styles.label} htmlFor="phone">Phone Number (incl. country code)</label>
+            <label className={styles.label} htmlFor="phone">Phone Number</label>
             <input
               className={styles.input}
               id="phone"
@@ -97,7 +97,6 @@ export default function TopupForm({ embedded = false }: TopupFormProps) {
               inputMode="tel"
             />
           </div>
-
           <div className={styles.field}>
             <label className={styles.label} htmlFor="productId">Product ID</label>
             <input
@@ -111,29 +110,30 @@ export default function TopupForm({ embedded = false }: TopupFormProps) {
               onChange={(e) => setProductId(e.target.value)}
             />
           </div>
+        </div>
 
-          <div className={`${styles.field} ${styles.fullRow}`}>
-            <label className={styles.label} htmlFor="amount">Amount (USD)</label>
-            <input
-              className={styles.input}
-              id="amount"
-              name="amount"
-              type="number"
-              step="0.01"
-              placeholder="Enter amount"
-              required
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
-              inputMode="decimal"
-            />
-          </div>
+        <div className={styles.field}>
+          <label className={styles.label} htmlFor="amount">Amount (USD)</label>
+          <input
+            className={styles.input}
+            id="amount"
+            name="amount"
+            type="number"
+            step="0.01"
+            placeholder="Enter amount"
+            required
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+            inputMode="decimal"
+          />
+        </div>
 
-          <div className={`${styles.buttonRow} ${styles.fullRow}`}>
-            <button className={styles.button} type="submit" disabled={isLoading}>
-              {isLoading ? "Submitting..." : "Submit Payment"}
-            </button>
-          </div>
-        </form>
+        <button className={styles.button} type="submit" disabled={isLoading}>
+          {isLoading ? "Processing..." : "Make Payment"}
+        </button>
+      </form>
+
+
 
       {responseText && (
         <pre className={styles.response}>{responseText}</pre>
@@ -141,7 +141,7 @@ export default function TopupForm({ embedded = false }: TopupFormProps) {
       {ctid && (
         <pre className={styles.response}>{`CTID: ${ctid}\nStatus: ${status ?? (isPolling ? "Polling..." : "Pending")}`}</pre>
       )}
-      </section>
+    </div>
   );
 
   if (embedded) {
