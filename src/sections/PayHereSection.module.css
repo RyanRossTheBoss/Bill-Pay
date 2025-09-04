@@ -21,7 +21,6 @@
   pointer-events: none;
 }
 
-
 .container {
   position: relative;
   z-index: 2;
@@ -51,6 +50,9 @@
   flex-direction: column;
   gap: 16px;
   text-align: left;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: enterUp 800ms ease forwards;
 }
 
 .title {
@@ -74,6 +76,9 @@
   width: 100%;
   max-width: 42vw;
   margin: 0;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: enterUp 800ms ease 200ms forwards;
 }
 
 .featuresSection {
@@ -81,6 +86,9 @@
   gap: 24px;
   padding-top: 12px;
   justify-content: space-between;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: enterUp 800ms ease 400ms forwards;
 }
 
 .feature {
@@ -101,13 +109,15 @@
   height: 18px;
 }
 
-
 .providersSection {
   background-color: white;
   padding: 40px 0;
   position: relative;
   margin-top: auto;
   z-index: 3;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: enterUp 800ms ease 600ms forwards;
 }
 
 .wavyLine {
@@ -116,7 +126,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, transparent, #ec4899, #f472b6, #ec4899, transparent);
+  background: linear-gradient(90deg, transparent, #ff003e, #ff6b6b, #ff003e, transparent);
   border-radius: 0 0 2px 2px;
 }
 
@@ -144,7 +154,17 @@
   filter: grayscale(100%);
   opacity: 0.7;
   transition: filter 150ms ease, opacity 150ms ease;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: enterUp 800ms ease forwards;
 }
+
+.logoContainer:nth-child(1) { animation-delay: 800ms; }
+.logoContainer:nth-child(2) { animation-delay: 900ms; }
+.logoContainer:nth-child(3) { animation-delay: 1000ms; }
+.logoContainer:nth-child(4) { animation-delay: 1100ms; }
+.logoContainer:nth-child(5) { animation-delay: 1200ms; }
+.logoContainer:nth-child(6) { animation-delay: 1300ms; }
 
 .logoContainer:hover {
   filter: grayscale(0%);
@@ -156,6 +176,11 @@
   height: auto;
   max-height: 60px;
   object-fit: contain;
+}
+
+@keyframes enterUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 768px) {
