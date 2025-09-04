@@ -97,9 +97,9 @@
   cursor: pointer;
   font-weight: 600;
   font-size: 16px;
-  transition: background 150ms ease;
-  margin-top: 8px;
-  width: 100%;
+  text-transform: uppercase;
+  transition: background 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+  box-shadow: 0 8px 18px rgba(255, 0, 62, 0.35);
 }
 
 .button:hover {

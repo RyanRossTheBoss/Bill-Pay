@@ -8,8 +8,7 @@ import { useState } from "react";
 import styles from "./Header.module.css";
 
 const NAV_ITEMS = [
-  { href: "/", label: "Home" },
-  { href: "/pay-here", label: "Pay Here" },
+  { href: "/", label: "Pay Here" },
   { href: "/what-we-do", label: "What We Do" },
   { href: "/who-we-are", label: "Who We Are" },
   { href: "/services", label: "Services" },

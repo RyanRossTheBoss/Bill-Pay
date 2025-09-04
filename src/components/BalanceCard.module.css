@@ -71,12 +71,13 @@
 
 .button {
   padding: 10px 14px;
-  border-radius: 12px;
+  border-radius: 50px;
   background: linear-gradient(135deg, #06b6d4, #3b82f6);
   color: white;
   border: none;
   cursor: pointer;
   font-weight: 600;
+  text-transform: uppercase;
   box-shadow: 0 8px 18px rgba(59, 130, 246, 0.35);
   transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
 }

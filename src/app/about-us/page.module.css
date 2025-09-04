@@ -1,0 +1,9 @@
+.page {
+  position: relative;
+  min-height: calc(100svh - 68px);
+  display: grid;
+  place-items: center;
+  padding: 120px 20px 80px;
+  background: white;
+  overflow: hidden;
+}

@@ -127,6 +127,26 @@
   pointer-events: auto;
 }
 
+.button {
+  width: 72px;
+  padding: 8px 8px;
+  border-radius: 50px;
+  background: rgba(17,24,39,0.55);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #e5e7eb;
+  cursor: pointer;
+  transition: all 150ms ease;
+  display: grid;
+  place-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 /* Responsive rules */
 @media (max-width: 640px) {
   .dock { display: none; }

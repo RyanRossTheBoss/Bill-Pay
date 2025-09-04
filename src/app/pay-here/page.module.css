@@ -5,7 +5,7 @@
   grid-template-rows: auto 1fr;
   align-items: start;
   justify-items: center;
-  padding: 40px 20px 56px;
+  padding: 120px 20px 56px;
   background: radial-gradient(1200px 800px at 10% -10%, #9ae6ff33, transparent),
     radial-gradient(1000px 700px at 110% 10%, #ffb4f233, transparent),
     linear-gradient(135deg, #0f172a, #111827);
@@ -70,7 +70,7 @@
   gap: 12px;
   align-items: center;
   padding: 14px 16px;
-  border-radius: 14px;
+  border-radius: 50px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.16);
   color: #e5e7eb;
@@ -84,13 +84,16 @@
 .highlight:nth-child(3) { animation-delay: 160ms; }
 
 .highlightIcon {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff003e, #ff6b6b);
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, #06b6d4, #3b82f6);
-  box-shadow: 0 8px 18px rgba(59,130,246,0.35);
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 8px 18px rgba(255, 0, 62, 0.35);
+  margin-bottom: 16px;
 }
 
 .highlightText {

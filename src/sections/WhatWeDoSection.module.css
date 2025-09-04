@@ -3,7 +3,7 @@
   min-height: 100svh;
   display: grid;
   place-items: center;
-  padding: 80px 20px 80px;
+  padding: 120px 20px 80px;
   background: radial-gradient(1200px 800px at 10% -10%, #9ae6ff33, transparent),
     radial-gradient(1000px 700px at 110% 10%, #ffb4f233, transparent),
     linear-gradient(135deg, #0f172a, #111827);
@@ -72,14 +72,16 @@
 }
 
 .featureIcon {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff003e, #ff6b6b);
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, #06b6d4, #3b82f6);
-  box-shadow: 0 8px 18px rgba(59,130,246,0.35);
-  margin-bottom: 10px;
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 8px 18px rgba(255, 0, 62, 0.35);
+  margin-bottom: 16px;
 }
 
 .featureTitle {
@@ -93,17 +95,17 @@
 }
 
 .card {
-  padding: 32px;
-  border-radius: 18px;
+  padding: 28px;
+  border-radius: 50px;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.18);
+  color: #e5e7eb;
   box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.12);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  color: #e5e7eb;
   transform: translateY(12px);
   opacity: 0;
-  animation: enterUp 700ms ease forwards;
+  animation: enterUp 720ms ease forwards;
 }
 
 @keyframes enterUp {

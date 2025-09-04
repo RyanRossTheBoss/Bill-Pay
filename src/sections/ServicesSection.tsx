@@ -6,17 +6,14 @@ import styles from "./ServicesSection.module.css";
 export default function ServicesSection() {
   return (
     <section id="services" className={styles.section}>
-      <div className={styles.decor}>
-        <Image src="https://tonetechrec.com/unity-cell-phone-bill-pay/_assets/media/cfda29d46a892e222c5f0f2b7b326e7b.png" alt="Decor" width={600} height={600} />
-      </div>
       <div className={styles.content}>
         <div className={styles.hero}>
           <AnimatedTitle as="h2" className={styles.title} text="SERVICES" />
           <p className={styles.subtitle}>The best products and services on the market are available on our website.</p>
           <div className={styles.chips}>
             <span className={styles.chip}>Bill Pay</span>
-            <span className={styles.chip}>sysytem</span>
-            <span className={styles.chip}>cellphone</span>
+            <span className={styles.chip}>System</span>
+            <span className={styles.chip}>Cellphone</span>
           </div>
         </div>
 
