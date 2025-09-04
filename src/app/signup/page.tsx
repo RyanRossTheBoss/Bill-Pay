@@ -4,7 +4,6 @@ import { useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import { signIn } from "next-auth/react";
 
 export default function SignupPage() {
   const [name, setName] = useState("");

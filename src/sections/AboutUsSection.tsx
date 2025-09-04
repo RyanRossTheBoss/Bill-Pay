@@ -76,7 +76,7 @@ export default function AboutUsSection() {
               </p>
               <p className={styles.storyParagraph}>
                 Our mission has always been to bridge the gap between people and essential services. 
-                Whether it's mobile recharge, bill payments, or international calling, we've made it 
+                Whether it&apos;s mobile recharge, bill payments, or international calling, we&apos;ve made it 
                 our goal to provide reliable solutions that keep families connected and communities thriving.
               </p>
               <p className={styles.storyParagraph}>
@@ -96,7 +96,7 @@ export default function AboutUsSection() {
               Experience the difference that comes from over a decade of excellence in digital payments.
             </p>
             <div className={styles.ctaQuote}>
-              "PING has transformed how we think about digital payments - making the complex simple and the impossible possible."
+              &ldquo;PING has transformed how we think about digital payments - making the complex simple and the impossible possible.&rdquo;
             </div>
           </div>
         </div>
