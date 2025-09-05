@@ -27,8 +27,8 @@ export default function Header() {
           <Image
             src="/images/Unity-Logo-01.webp"
             alt="Unity Logo"
-            width={120}
-            height={48}
+            width={150}
+            height={60}
             className={styles.logo}
           />
         </div>
@@ -85,8 +85,8 @@ export default function Header() {
           <Image
             src="/images/Unity-Logo-01.webp"
             alt="Unity Logo"
-            width={100}
-            height={40}
+            width={120}
+            height={48}
             className={styles.sidebarLogo}
           />
           <button 
