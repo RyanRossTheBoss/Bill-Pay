@@ -47,19 +47,6 @@ export default function Header() {
           })}
         </nav>
         <div className={styles.actions}>
-          <button className={styles.iconButton} aria-label="Search">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="11" cy="11" r="8"/>
-              <path d="m21 21-4.35-4.35"/>
-            </svg>
-          </button>
-          <button className={styles.iconButton} aria-label="Shopping bag">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-              <line x1="3" y1="6" x2="21" y2="6"/>
-              <path d="M16 10a4 4 0 0 1-8 0"/>
-            </svg>
-          </button>
           {session ? (
             <button className={styles.authBtn} onClick={() => signOut()}>Sign out</button>
           ) : (
@@ -116,21 +103,6 @@ export default function Header() {
           })}
         </nav>
         <div className={styles.sidebarActions}>
-          <button className={styles.sidebarIconButton} aria-label="Search">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="11" cy="11" r="8"/>
-              <path d="m21 21-4.35-4.35"/>
-            </svg>
-            <span>Search</span>
-          </button>
-          <button className={styles.sidebarIconButton} aria-label="Shopping bag">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-              <line x1="3" y1="6" x2="21" y2="6"/>
-              <path d="M16 10a4 4 0 0 1-8 0"/>
-            </svg>
-            <span>Cart</span>
-          </button>
           {session ? (
             <button className={styles.sidebarAuthBtn} onClick={() => signOut()}>Sign out</button>
           ) : (
