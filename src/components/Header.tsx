@@ -25,8 +25,8 @@ export default function Header() {
       <div className={styles.bar}>
         <div className={styles.brand}>
           <Image
-            src="/images/Ping-Logo.webp"
-            alt="Ping Logo"
+            src="/images/Unity-Logo-01.webp"
+            alt="Unity Logo"
             width={120}
             height={48}
             className={styles.logo}
@@ -83,8 +83,8 @@ export default function Header() {
       <div className={`${styles.mobileSidebar} ${isMenuOpen ? styles.open : ''}`}>
         <div className={styles.sidebarHeader}>
           <Image
-            src="/images/Ping-Logo.webp"
-            alt="Ping Logo"
+            src="/images/Unity-Logo-01.webp"
+            alt="Unity Logo"
             width={100}
             height={40}
             className={styles.sidebarLogo}

@@ -8,9 +8,9 @@ export default function AboutUsSection() {
       <div className={styles.content}>
         {/* Hero Section */}
         <div className={styles.hero}>
-          <AnimatedTitle as="h2" className={styles.title} text="About PING" />
+          <AnimatedTitle as="h2" className={styles.title} text="About UNITY" />
           <p className={styles.lead}>
-            Since 2013, PING has been at the forefront of digital payment innovation, 
+            Since 2013, UNITY has been at the forefront of digital payment innovation, 
             connecting millions of people worldwide through reliable and secure financial services.
           </p>
           <div className={styles.chips}>
@@ -70,7 +70,7 @@ export default function AboutUsSection() {
             <h3 className={styles.sectionTitle}>Our Story</h3>
             <div className={styles.storyContent}>
               <p className={styles.storyParagraph}>
-                PING was born from a simple yet powerful idea: to make digital payments accessible, 
+                UNITY was born from a simple yet powerful idea: to make digital payments accessible, 
                 secure, and convenient for everyone. What started as a small operation in 2013 has 
                 grown into a global platform that serves millions of customers worldwide.
               </p>
@@ -80,7 +80,7 @@ export default function AboutUsSection() {
                 our goal to provide reliable solutions that keep families connected and communities thriving.
               </p>
               <p className={styles.storyParagraph}>
-                Today, PING stands as a testament to innovation and customer-centric design. We continue 
+                Today, UNITY stands as a testament to innovation and customer-centric design. We continue 
                 to evolve and adapt to the changing needs of our customers, always putting people first 
                 in everything we do.
               </p>
@@ -91,12 +91,12 @@ export default function AboutUsSection() {
         {/* CTA Section */}
         <div className={styles.ctaSection}>
           <div className={styles.ctaCard}>
-            <h3 className={styles.ctaTitle}>Join the PING Family</h3>
+            <h3 className={styles.ctaTitle}>Join the UNITY Family</h3>
             <p className={styles.ctaText}>
               Experience the difference that comes from over a decade of excellence in digital payments.
             </p>
             <div className={styles.ctaQuote}>
-              &ldquo;PING has transformed how we think about digital payments - making the complex simple and the impossible possible.&rdquo;
+              &ldquo;UNITY has transformed how we think about digital payments - making the complex simple and the impossible possible.&rdquo;
             </div>
           </div>
         </div>

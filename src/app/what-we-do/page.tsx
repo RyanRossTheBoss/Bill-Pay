@@ -4,8 +4,8 @@ import AnimatedTitle from "@/components/AnimatedTitle";
 import { FiHome, FiBookOpen, FiHeart } from "react-icons/fi";
 
 export const metadata = {
-  title: "What We Do | Ping Bill Pay",
-  description: "Pay it forward — learn about PING's humanitarian efforts.",
+  title: "What We Do | Unity Bill Pay",
+  description: "Pay it forward — learn about UNITY's humanitarian efforts.",
 };
 
 export default function WhatWeDoPage() {
@@ -16,7 +16,7 @@ export default function WhatWeDoPage() {
           <span className={styles.badge}>People First • #AlwaysBetter</span>
           <AnimatedTitle as="h1" className={styles.title} text="Pay it forward" />
           <p className={styles.lead}>
-            A portion of every transaction processed through Ping goes toward supporting Ping humanitarian projects.
+            A portion of every transaction processed through Unity goes toward supporting Unity humanitarian projects.
           </p>
         </section>
 
@@ -45,7 +45,7 @@ export default function WhatWeDoPage() {
         </section>
 
         <section className={styles.card}>
-          <p className={styles.sectionTitle}>When you choose PING,</p>
+          <p className={styles.sectionTitle}>When you choose UNITY,</p>
           <p className={styles.paragraph}>
             {`your everyday payments become part of a bigger\nmission to create positive change & transforming\nsimple transactions into meaningful contributions\nthat impact lives across the globe.`}
           </p>

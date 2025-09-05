@@ -8,7 +8,7 @@ export default function WhoWeAreSection() {
       <div className={styles.content}>
         {/* Hero Section */}
         <div className={styles.hero}>
-          <AnimatedTitle as="h2" className={styles.title} text="What Is PING" />
+          <AnimatedTitle as="h2" className={styles.title} text="What Is UNITY" />
           <p className={styles.lead}>
             A comprehensive platform connecting people through innovative mobile and bill payment services, 
             designed to make your digital life seamless and secure.
@@ -40,7 +40,7 @@ export default function WhoWeAreSection() {
         <div className={styles.servicesOverview}>
           <h3 className={styles.sectionTitle}>Our Core Services</h3>
           <p className={styles.sectionSubtitle}>
-            PING provides a complete suite of digital payment and communication solutions 
+            UNITY provides a complete suite of digital payment and communication solutions 
             designed to keep you connected, anywhere in the world.
           </p>
         </div>
@@ -144,10 +144,10 @@ export default function WhoWeAreSection() {
           </div>
         </div>
 
-        {/* Why Choose PING */}
+        {/* Why Choose UNITY */}
         <div className={styles.valueSection}>
           <div className={styles.valueHeader}>
-            <h3 className={styles.valueTitle}>Why Choose PING?</h3>
+            <h3 className={styles.valueTitle}>Why Choose UNITY?</h3>
             <p className={styles.valueSubtitle}>
               Experience the difference that comes from putting people first in everything we do.
             </p>
@@ -221,7 +221,7 @@ export default function WhoWeAreSection() {
           <div className={styles.ctaCard}>
             <h3 className={styles.ctaTitle}>Ready to Get Started?</h3>
             <p className={styles.ctaText}>
-              Join millions of satisfied customers who trust PING for their mobile and bill payment needs.
+              Join millions of satisfied customers who trust UNITY for their mobile and bill payment needs.
             </p>
             <div className={styles.ctaButtons}>
               <a href="/pay-here" className={styles.ctaButton}>

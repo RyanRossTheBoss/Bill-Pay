@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ping Bill Pay",
-  description: "Ping Bill Pay",
+  title: "Unity Bill Pay",
+  description: "Unity Bill Pay",
 };
 
 export default function RootLayout({
